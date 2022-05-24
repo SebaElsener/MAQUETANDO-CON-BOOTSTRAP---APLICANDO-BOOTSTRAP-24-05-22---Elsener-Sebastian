@@ -1,0 +1,749 @@
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgb(202, 238, 247), rgba(255, 255, 0, 0.151));
+}
+
+/* propiedades-estilos header */
+header{
+    background: url(../img/imgpuente.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 7rem;
+}
+
+.imagenLogo{
+    transform: scale(.5);
+    width: 50%;
+}
+
+header nav{
+    width: 50%;
+}
+
+header nav ul li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: x-small;
+    list-style: none;
+}
+
+header nav ul li a{
+    color: rgb(255, 255, 255);
+    text-shadow: .25rem .25rem .2rem rgba(8, 8, 8, 0.767);
+    text-decoration: none;
+}
+
+/* este estilo pisa el estilo ul de bootstrap para que no quede desacomodado el nav del header */
+.navHeaderLocal ul{
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+/* animacion texto header */
+header nav ul li a{
+    animation-duration: 2s;
+    animation-name: aparecer;
+   }
+
+@keyframes aparecer{
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+
+/* propiedades-estilos main index mobile first 360x740px */
+.noticiaCinco, .noticiaSeis, .masNoticias{
+    display: none;
+}
+
+.tituloPrincipal{
+    color: rgb(20, 182, 160);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    text-shadow: .1rem .1rem .2rem rgba(128, 128, 128, 0.767);
+    grid-area: tituloPrincipal;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.cajaIframe{
+    width: 95%;
+    transition: border-radius .7s, opacity .7s;
+}
+
+.cajaIframe:hover{
+    border-radius: 1rem;
+    opacity: 55%;
+}
+
+.grillaPpal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "tituloPrincipal tituloPrincipal"
+        "noticiaUno noticiaDos"
+        "noticiaTres noticiaCuatro"
+        "formularioTrivia formularioTrivia"
+        "edicAnteriores redesSociales";
+    justify-content: space-around;
+    text-align: center;
+}
+
+.noticiaUno{
+    grid-area: noticiaUno;
+}
+
+.tituloNoticia{
+    width: 95%;
+}
+
+.noticiaDos{
+    grid-area: noticiaDos;
+}
+
+.noticiaTres{
+    margin-top: .5rem;
+    grid-area: noticiaTres;
+}
+
+.noticiaCuatro{
+    margin-top: .5rem;
+    grid-area: noticiaCuatro;
+}
+
+/* sobreescribiendo los estilos bootstrap formulario trivia html index */
+.formularioTrivia{
+    padding: 5%;
+    grid-area: formularioTrivia;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .8rem;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.formLocal legend{
+    float: none;
+    width: auto;
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: normal;
+}
+
+.formLocal input{
+    font-size: small;
+}
+
+/* /////////////////////////////////////////////////////////////////// */
+
+.edicAnteriores{
+    background-color: azure;
+    grid-area: edicAnteriores;
+    margin-top: 1rem;
+    border-radius: 15px;
+}
+
+.edicionesAnteriores{
+    gap: .3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.redesSociales{
+    grid-area: redesSociales;
+    padding: 2rem;
+}
+
+/* estilos aside redes sociales, bootstrap adaptado al proyecto */
+.iconoFacebook, .iconoWp, .iconoTw, .iconoInsta{
+    width: 3rem;
+    margin: 1rem;
+    border-radius: .7rem;
+    transition: .5s;
+}
+
+.iconoFacebook:hover{
+    background-color: rgb(81, 127, 211);
+    transform: translateY(-.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px rgb(81, 127, 211);
+}
+
+.iconoWp:hover{
+    background-color: rgb(24, 160, 24);
+    transform: translateY(-.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px rgb(24, 160, 24);
+}
+
+.iconoTw:hover{
+    background-color: rgb(0, 195, 255);
+    transform: translateY(-.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px rgb(0, 195, 255);
+}
+
+.iconoInsta:hover{
+    background-color: rgb(248, 46, 248);
+    transform: translateY(-.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px rgb(248, 46, 248);
+}
+
+.offcanvas{
+    width: 75%;
+    padding: 3rem;
+    text-align: center;
+    background-color: rgba(254, 255, 225, 0.644);
+    border-radius: 0 2rem 0 0;
+    justify-content: center;
+}
+/* /////////////////////////////////////////////////////////////// */
+
+.edicion1, .edicion2{
+    border: 1px solid rgb(216, 214, 214);
+}
+
+.tituloNoticia, .tituloNoticiaSecciones{
+    text-decoration: none;
+    font-size: .8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.671);
+    margin: 0;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.tituloAside{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: .5rem;
+    color: cadetblue;
+    font-size: medium;
+    text-align: center;
+}
+
+/* propiedades-estilos footer */
+footer{
+    margin-top: 3%;
+    padding: .5rem;
+    background-color: rgba(100, 148, 237, 0.925);
+    border-radius: 5px;
+}
+
+footer nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer nav ul li{
+    list-style: none;
+}
+
+footer nav ul li a{
+    color: rgba(255, 255, 255, 0.904);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* este estilo pisa el estilo ul de bootstrap para que no quede desacomodado el footer */
+.navFooterLocal ul{
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* estilos formulario html contacto con bootstrap */
+.mainContac{
+    height: 34rem;
+}
+
+.formularioContacto h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255, 102, 0, 0.815);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.formularioContacto{
+    height: auto;
+    padding: 1.5rem;
+    margin: 2rem;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.473);
+    text-align: center;
+}
+
+.mb-3{
+    font-size: 1rem;
+}
+
+.form-check-label{
+    font-size: .8rem;
+    text-align: left;
+}
+
+.formularioContacto form button{
+    background-color:  rgb(193, 227, 255);
+    border: none;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.603);
+    transition: background-color .7s;
+}
+
+.formularioContacto form button:hover{
+    background-color: rgba(255, 102, 0, 0.815);
+    color: rgba(0, 0, 0, 0.603);
+}
+
+/* propiedades-estilos para noticias de los html de las secciones deportivas */
+.cajaNoticia{
+    display: grid;
+    grid-template-areas:
+        "tituloSecundario"
+        "fotoNoticia"
+        "tituloNoticiaSecciones"
+        "textoNoticia"
+        "redesSociales";
+    text-align: center;
+    justify-items: center;
+    padding: 7%;
+}
+
+.tituloSecundario{
+    grid-area: tituloSecundario;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: coral;
+    margin-bottom: 5%;
+}
+
+.tituloNoticiaSecciones{
+    margin-top: 5%;
+}
+
+.fotoNoticia{
+    width: 60%;
+    height: auto;
+}
+
+.textoNoticia{
+    margin-top: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+
+.redesSociales{
+    grid-area: redesSociales;
+}
+
+.mainNoticiashtml{
+    height: auto;
+}
+
+/* estilos html acerca de */
+.mainAcercaDe{
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cajaAcercaDe{
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    width: 340px;
+    height: 230px;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    box-shadow: 2px 1px 10px 1px gray;
+}
+
+.animate__animated{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 10px gray;
+    font-size: 2rem;
+}
+
+.derechosAcercaDe{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.692);
+}
+
+.mailAcercaDe{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 128, 43);
+    font-size: 1rem;
+}
+
+.disenoWeb{
+    font-size: 1.4rem;
+}
+
+.container-fluid{
+    height: 100vh;
+}
+
+.container-fluid main nav{
+    text-align: center;
+}
+
+.container-fluid main nav ul li{
+    list-style-type: none;
+    text-decoration: none;
+    transition: .7s;
+}
+
+.container-fluid main nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.container-fluid main nav ul{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(129, 129, 129);
+    border-radius: 5px;
+}
+
+.container-fluid main nav ul li:hover{
+    background-color: rgb(0, 183, 255);
+}
+
+.row{
+    justify-content: center;
+}
+
+
+/* media queries */
+
+/* query tablet 800px hasta 1024px /*
+/* */
+@media screen and (min-width: 800px) {
+    /* estilos header index y demás html */
+    header{
+        height: 10rem;
+    }
+
+    header nav ul{
+        display: inline-block;
+        text-align: right;
+    }
+
+    header nav ul li{
+        font-size: .9rem;
+    }
+
+    .imagenLogo{
+        transform: scale(.8);
+    }
+
+    .tituloPrincipal{
+        font-size: 2rem;
+        text-shadow: .2rem .2rem .3rem rgba(128, 128, 128, 0.767);
+    }
+
+    .cajaIframe{
+        width: 95%;
+        height: auto;
+    }
+
+    .noticiaCinco, .noticiaSeis{
+        display: block;
+        margin-top: .5rem;
+    }
+
+    .grillaPpal{
+        grid-template-areas:
+            "tituloPrincipal tituloPrincipal"
+            "noticiaUno noticiaDos"
+            "noticiaTres noticiaCuatro"
+            "noticiaCinco noticiaSeis"
+            "formularioTrivia formularioTrivia"
+            "edicAnteriores redesSociales";
+        gap: .5rem;
+        padding: 1%;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .noticiaCinco{
+        margin-top: .5rem;
+    }
+
+    .noticiaSeis{
+        margin-top: .5rem;
+    }
+
+    .tituloNoticia{
+        font-size: 1.3rem;
+    }
+
+    .formularioTrivia form fieldset div label{
+        font-size: 1.2rem;
+    }
+
+    .formularioTrivia form{
+        font-size: 1.3rem;
+    }
+
+    .tituloAside{
+        color: cadetblue;
+        font-size: larger;
+        text-align: center;
+    }
+
+    .iconoFacebook, .iconoWp, .iconoTw, .iconoInsta{
+        width: 4rem;
+        margin: 1rem;
+    }
+    
+    .offcanvas{
+        width:fit-content;
+    }
+
+    footer nav ul li a{
+        font-size: .9rem;
+    }
+
+    /* estilos secciones deportivas demás html */
+    .tituloSecundario{
+        font-size: 1.8rem;
+        margin-bottom: 1%;
+    }
+
+    .tituloNoticiaSecciones{
+        font-size: 1.5rem;
+    }
+
+    .textoNoticia{
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .mainNoticiashtml{
+        height: auto;
+    }
+
+    /* estilos html contacto 800px */
+
+    .mainContac{
+        height: 50rem;
+        padding: 5rem;
+    }
+
+    .formularioContacto h1{
+        font-size: 2.2rem;
+    }
+
+    .form-label{
+        font-size: 1.5rem;
+    }
+
+    .form-check-label{
+        font-size: 1.2rem;
+    }
+
+    .formularioContacto form button{
+        font-size: 1.5rem;
+    }
+
+    /* estilos acercade 800px */
+    .cajaAcercaDe{
+        width: 400px;
+        height: 290px;
+
+    }
+
+    .derechosAcercaDe{
+        font-size: 1.3rem;
+    }
+    
+    .mailAcercaDe{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(255, 128, 43);
+        font-size: 1.3rem;
+    }
+    
+    .disenoWeb{
+        font-size: 2rem;
+    }
+
+    .animate__animated{
+        font-size: 3rem;
+    }
+
+    .container-fluid main nav ul li a{
+        font-size: 1.3rem;
+    }
+
+}
+
+/* query desktop más de 1024px */
+@media screen and (min-width: 1024px) {
+    /* estilos header index y demás html */
+    header{
+        height: 16rem;
+    }
+
+    header nav{
+        width: 90%;
+    }
+
+    header nav ul{
+        margin-right: 2rem;
+        justify-content: space-around;
+        display: flex;
+    }
+
+    header nav ul li{
+        font-size: 1.2rem;
+    }
+
+    .imagenLogo{
+        width: 35%;
+        transform: scale(1);
+    }
+
+    .tituloPrincipal{
+        font-size: 3rem;
+        text-shadow: .2rem .2rem .3rem rgba(128, 128, 128, 0.767);
+    }
+
+    .grillaPpal{
+        height: auto;
+        grid-template-areas:
+            "tituloPrincipal tituloPrincipal tituloPrincipal redesSociales"
+            "noticiaUno noticiaDos noticiaTres formularioTrivia"
+            "noticiaCuatro noticiaCinco noticiaSeis edicAnteriores";
+        gap: .5rem;
+        padding: 1%;
+        grid-template-rows: .5fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-around;
+        text-align: left;
+        align-items: center;
+    }
+
+    .noticiaUno, .noticiaDos, .noticiaTres, .noticiaCuatro, .noticiaCinco, .noticiaSeis{
+        margin-top: 0%;
+    }
+
+    .tituloNoticia{
+        font-size: 1.3rem;
+    }
+
+    .tituloAside{
+        margin: 0%;
+    }
+
+    .cajaIframe{
+        width: 95%;
+        height: 100%;
+    }
+
+    .edicAnteriores{
+        margin: 0%;
+        height: auto;
+        padding: 12%;
+    }
+
+    .edicionesAnteriores{
+        gap: 20%;
+    }
+
+    .edicion1, .edicion2{
+        margin-top: 10%;
+    }
+
+    .formularioTrivia{
+        padding-top: 0%;
+        height: 100%;
+    }
+
+    .formularioTrivia form fieldset div label{
+        font-size: 1rem;
+    }
+
+    .formularioTrivia form{
+        background-color: rgba(255, 255, 255, 0.979);
+        font-size: 130%;
+        padding: 10%;
+    }
+
+    .tituloAside{
+        color: cadetblue;
+        font-size: larger;
+        text-align: center;
+    }
+
+    footer{
+        padding: 2rem;
+        margin-top: 0%;
+        align-items: center;
+    }
+
+    footer nav ul li a{
+        font-size: 1.2rem;
+    }
+
+    /* estilos secciones deportivas de los demás html */
+    .iconosRedesNoticias{
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: dotted 1px darkcyan;
+        border-radius: 15px;
+        margin: 0%;
+    }
+
+    .tituloSecundario{
+        margin: 0%;
+        font-size: 2.2rem;
+    }
+
+    .tituloNoticiaSecciones{
+        margin: 0%;
+        font-size: 1.5rem;
+    }
+
+    .textoNoticia{
+        font-size: 1.2rem;
+    }
+
+    .mainNoticiashtml{
+        height: auto;
+    }
+
+    /* estilos html contacto 1024px */
+    .mainContac{
+        padding: 7rem;
+        height: auto;
+    }
+
+}
+
